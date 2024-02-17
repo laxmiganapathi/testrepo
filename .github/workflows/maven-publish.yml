@@ -6,7 +6,7 @@ name: CI pipeline
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
