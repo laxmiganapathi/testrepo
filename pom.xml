@@ -65,7 +65,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>com.sample.sri</finalName>
+		<finalName>my</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

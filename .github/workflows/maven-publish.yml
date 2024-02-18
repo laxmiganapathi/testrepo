@@ -11,7 +11,7 @@ on:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -27,7 +27,7 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Maven
-      run: cd web-thymeleaf-war ; mvn -B package --file pom.xml
+      run:  mvn -B package --file pom.xml
 
     # - name: Publish to GitHub Packages Apache Maven
       # run:  cd web-thymeleaf-war ; mvn deploy -Dregistry=https://maven.pkg.github.com/laxmiganapathi/testrepo
@@ -37,5 +37,5 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         name: my-artifact
-        path: web-thymeleaf-war/target/com.sample.sri.war
+        path: web-thymeleaf-war/target/*.war
                  
