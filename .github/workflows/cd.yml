@@ -6,17 +6,20 @@ on:
     workflows: ["CI pipeline"]
     types:
       - completed
-
+    branches:
+      - main
 
 jobs:
    deploy:
      runs-on: ubuntu-latest
 
      steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       # Download the artifact from the CI workflow
       - name: Download artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v2
         with:
           name: my-artifact
 
