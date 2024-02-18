@@ -8,7 +8,7 @@
 	<packaging>war</packaging>
 	<name>Spring Boot Web Thymeleaf Example</name>
 	<description>Spring Boot Web Thymeleaf Example</description>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
