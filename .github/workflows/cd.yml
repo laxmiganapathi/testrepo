@@ -16,12 +16,18 @@ jobs:
      steps:
      
 
-      # Download the artifact from the CI workflow
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: my-artifact
+      # # Download the artifact from the CI workflow
+      # - name: Download artifact
+        # uses: actions/download-artifact@v4
+        # with:
+          # name: my-artifact
 
-      # Add your deployment commands here
-      - name: Deploy
-        run: echo "Running deployment commands"
+      # # Add your deployment commands here
+      # - name: Deploy
+        # run: echo "Running deployment commands"
+        - name: List artifacts for a workflow run
+          run: |
+            curl \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              https://api.github.com/repos/owner/repo/actions/runs/run_id/artifacts
