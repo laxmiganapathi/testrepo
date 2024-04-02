@@ -29,9 +29,9 @@ jobs:
     - name: Build with Maven
       run:  mvn -B package --file pom.xml
 
-    # - name: Publish to GitHub Packages Apache Maven
-      # run:  cd web-thymeleaf-war ; mvn deploy -Dregistry=https://maven.pkg.github.com/laxmiganapathi/testrepo
-      # env:
+    - name: Publish to GitHub Packages Apache Maven
+      run:  cd web-thymeleaf-war ; mvn deploy -Dregistry=https://maven.pkg.github.com/laxmiganapathi/testrepo
+      env:
         # GITHUB_TOKEN: ${{ secrets.MYTOKEN }}
    
     - uses:  actions/upload-artifact@v4
