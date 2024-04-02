@@ -32,7 +32,7 @@ jobs:
     - name: Publish to GitHub Packages Apache Maven
       run:  cd web-thymeleaf-war ; mvn deploy -Dregistry=https://maven.pkg.github.com/laxmiganapathi/testrepo
       env:
-        # GITHUB_TOKEN: ${{ secrets.MYTOKEN }}
+        GITHUB_TOKEN: ${{ secrets.MYTOKEN }}
    
     - uses:  actions/upload-artifact@v4
       with:
